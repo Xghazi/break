@@ -1,0 +1,52 @@
+/* ===== BASIC LAYOUT ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container centers the game and keeps a max width
+   Bigger max-width so PC view is a bit larger, but
+   phones will just use 100% of screen width */
+#game-container {
+  border: 2px solid #555;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px; /* was 480, now a bit bigger for PC */
+  background: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Canvas scales to container width */
+#gameCanvas {
+  display: block;
+  background: #000;
+  width: 100%;
+  height: auto;
+}
+
+/* Mute button under the game */
+#muteButton {
+  border: none;
+  padding: 6px 0;
+  font-size: 14px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+#muteButton:hover {
+  background: #444;
+}
